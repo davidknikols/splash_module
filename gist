@@ -1,0 +1,141 @@
+ 
+<!-- ==========  HTML ================== -->
+
+    <!-- WORK  ORGANISM SECTION -->
+
+
+        <section id="work-organism">
+            <div class="organism-fire">
+                 <div class="icon-boxplus"></div>            
+            </div>
+        </section>
+        <!-- ==================================== -->
+        <!-- ==================================== -->
+        
+        
+<!-- ======= START OF CSS =========== -->        
+        
+    #work-organism .organism-fire{
+	position: relative;
+	width:100%;
+	height:0;
+	padding: 0px; /* remove any pre-existing padding, just in case */
+	padding-bottom: 84.21%; /* the height 272 divided by 323 the width than multiply by 100 */
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-repeat: no-repeat;
+
+    background-image: url("../assets/images/drip-section-320-01.jpg");
+    /* these additional setting are to perserve 3d ..basically it helps
+    the icons nested inside this div look better*/
+    -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+/* THE PATTERN OVERLAY*/
+
+#work-organism .pattern-overlay{
+	background-image: url(".../assets/patterns/dot-hatch.png");
+	background-repeat: repeat;
+	width:100%;
+	height:0;
+	padding: 0; /* remove any pre-existing padding, just in case */
+	padding-bottom: 84.21%; /* the height 272 divided by 323 the width than multiply by 100 */
+	z-index: 10;
+	}
+	
+
+THIS IS FOR RESPONSIVE IMAGE SIZE SWOPPING / REMEMBER TO DO THE HEIGHT PADDING MATH ON EACH IMAGE
+SO IT KEEPS A TRUE ASPECT RATIO, NOT FORCE A PREVIOUS SWOPPED IMAGE ASPECT RATIO, SO BASICALLY
+THEY ALL NEED THEIR INDIVIDUAL PADDING-BOTTOM SETTING ( TRICK USED TO DETERMIN HEIGHT 
+WITHOUT STATING IT
+
+
+@media (min-width : 480px) {
+	#work-organism .organism-fire{
+	background-image: url("../assets/images/drip-section-480-01.jpg");}
+
+}
+
+@media (min-width : 768px) {
+	#work-organism .organism-fire{
+	background-image: url("../assets/images/drip-section-768-01.jpg");}
+
+}
+
+@media (min-width : 1170px) {
+	#work-organism .organism-fire{
+	background-image: url("../assets/images/drip-section-1170-01.jpg");}
+
+}
+
+
+/*  WORK ORGANISM ENDS*/
+
+	
+	// THIS PART IS FOR ADDING AN ICON SMACK CENTER ///////////
+	
+	
+	/*THE CSS FOR AN ICON COMPLETLY CENTERED BOTH WAYS */
+
+.organism-fire  .icon-boxplus  {
+   position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+.organism-fire .icon-boxplus:before {
+	content: "\e609";	
+	font-size: 96px;
+  color: #05cafc;
+ 
+  text-shadow: 0px 1px 1px #000000; 
+}
+
+.organism-fire .icon-boxplus:hover:before {
+  opacity:0.5;
+  color: #000;
+  text-shadow: 0px 1px 1px #05cafc; 
+}
+
+
+<!-- ==================================== -->
+
+
+	
+THIS LITTLE SNIPPET REMOVES THE UNDERLINE FROM THE ICONS
+
+
+a:hover i[class^="icon-"],
+a:hover i[class*=" icon-"]{
+   text-decoration: none;
+}
+
+	
+
+
+/* =============================================*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
